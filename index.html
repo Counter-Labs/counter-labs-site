@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Counter Labs — Coming Soon</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@300;700&family=Fraunces:ital,wght@1,300&family=DM+Mono:wght@400&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html, body {
+      height: 100%;
+      width: 100%;
+    }
+
+    body {
+      background-color: #1B2D25;
+      color: #E8DFD0;
+      font-family: 'Fraunces', Georgia, serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .page {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      padding: 48px 56px;
+      position: relative;
+      min-height: 100vh;
+    }
+
+    /* Copper rule — top left accent */
+    .rule {
+      width: 80px;
+      height: 4px;
+      background-color: #D4622A;
+      margin-bottom: 64px;
+      flex-shrink: 0;
+    }
+
+    /* Main statement */
+    .statement {
+      flex: 1;
+      display: flex;
+      align-items: flex-start;
+      padding-top: 16px;
+    }
+
+    .statement p {
+      font-size: clamp(2.6rem, 5.5vw, 5.2rem);
+      font-weight: 700;
+      line-height: 1.15;
+      letter-spacing: -0.01em;
+      max-width: 900px;
+    }
+
+    .statement p .line-plain {
+      color: #E8DFD0;
+    }
+
+    .statement p .line-copper {
+      color: #D4622A;
+    }
+
+    /* Footer row */
+    .footer {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      padding-top: 48px;
+    }
+
+    .coming-soon {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.75rem;
+      font-weight: 400;
+      letter-spacing: 0.18em;
+      color: #4A7A5E;
+      text-transform: uppercase;
+    }
+
+    /* Logo mark — three vertical bars + copper slash */
+    .logo-mark {
+      width: 51px;
+      height: 64px;
+      flex-shrink: 0;
+    }
+
+    @media (max-width: 600px) {
+      .page {
+        padding: 36px 32px;
+      }
+
+      .rule {
+        margin-bottom: 48px;
+      }
+
+      .statement p {
+        font-size: clamp(2rem, 8vw, 3rem);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+
+    <!-- Copper rule -->
+    <div class="rule"></div>
+
+    <!-- Main statement -->
+    <div class="statement">
+      <p>
+        <span class="line-plain">Everyone loves the idea<br>
+        of impact-driven tech.<br></span>
+        <span class="line-copper">But no one wants to<br>
+        fund its creation.</span>
+      </p>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+      <span class="coming-soon">Counter Labs — Coming Soon</span>
+
+      <!-- Logo mark SVG — two Sand bars, third bar Sage (lower), Copper circle-and-slash -->
+      <svg class="logo-mark" viewBox="0 0 80 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Counter Labs">
+        <!-- Bar 1 — Sand, slender and tall -->
+        <rect x="4" y="4" width="8" height="78" rx="4" fill="#E8DFD0"/>
+        <!-- Bar 2 — Sand -->
+        <rect x="22" y="4" width="8" height="78" rx="4" fill="#E8DFD0"/>
+        <!-- Bar 3 lower segment — Sage, from mid-height down -->
+        <rect x="40" y="43" width="8" height="39" rx="4" fill="#4A7A5E"/>
+        <!-- Copper circle at mid-height interruption -->
+        <circle cx="44" cy="43" r="8" fill="#D4622A"/>
+        <!-- Copper slash arm — upper right -->
+        <line x1="44" y1="43" x2="68" y2="6" stroke="#D4622A" stroke-width="8" stroke-linecap="round"/>
+      </svg>
+    </div>
+
+  </div>
+</body>
+</html>
